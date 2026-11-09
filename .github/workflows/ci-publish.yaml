@@ -16,12 +16,13 @@
 # Copyright (c) OWASP Foundation. All Rights Reserved.
 name: Publish CI
 
-on:
-  push:
-    tags:
-      - '[0-9]*'
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     tags:
+#       - '[0-9]*'
+#   workflow_dispatch:
+# 
 permissions: { }
 
 jobs:

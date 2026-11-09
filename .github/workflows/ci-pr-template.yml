@@ -16,10 +16,11 @@
 # Copyright (c) OWASP Foundation. All Rights Reserved.
 name: PR Template Check
 
-on:
-  pull_request:
-    types: [opened, edited, synchronize, reopened]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     types: [opened, edited, synchronize, reopened]
+# 
 permissions: {}
 
 jobs:

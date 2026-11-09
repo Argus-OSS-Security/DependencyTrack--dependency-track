@@ -16,14 +16,15 @@
 # Copyright (c) OWASP Foundation. All Rights Reserved.
 name: Update Proto Documentation
 
-on:
-  push:
-    branches:
-    - main
-    paths:
-    - notification/api/src/main/proto/org/dependencytrack/notification/**/*.proto
-    - proto/src/main/proto/org/dependencytrack/policy/**/*.proto
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#     - main
+#     paths:
+#     - notification/api/src/main/proto/org/dependencytrack/notification/**/*.proto
+#     - proto/src/main/proto/org/dependencytrack/policy/**/*.proto
+# 
 permissions: { }
 
 jobs:

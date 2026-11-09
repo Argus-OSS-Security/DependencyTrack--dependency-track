@@ -16,11 +16,12 @@
 # Copyright (c) OWASP Foundation. All Rights Reserved.
 name: E2E Tests
 
-on:
-  schedule:
-    - cron: '0 2 * * *'
-  workflow_dispatch: { }
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   schedule:
+#     - cron: '0 2 * * *'
+#   workflow_dispatch: { }
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true

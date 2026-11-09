@@ -16,31 +16,32 @@
 # Copyright (c) OWASP Foundation. All Rights Reserved.
 name: Build CI
 
-on:
-  push:
-    branches:
-      - 'main'
-      - 'feature-**'
-      - '[0-9]+.[0-9]+.x' # Release branches
-    paths-ignore:
-      - '**/*.md'
-      - 'docs/**'
-  pull_request:
-    branches:
-      - 'main'
-      - 'feature-**'
-      - '[0-9]+.[0-9]+.x' # Release branches
-    paths-ignore:
-      - '**/*.md'
-      - 'docs/**'
-  workflow_dispatch:
-    inputs:
-      app-version:
-        type: string
-        required: false
-        default: ""
-        description: "Override the derived app-version (e.g. 5.0.0 or 5.0.0-rc.1). Leave empty to use the derived snapshot tag (e.g. 5-snapshot)."
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - 'main'
+#       - 'feature-**'
+#       - '[0-9]+.[0-9]+.x' # Release branches
+#     paths-ignore:
+#       - '**/*.md'
+#       - 'docs/**'
+#   pull_request:
+#     branches:
+#       - 'main'
+#       - 'feature-**'
+#       - '[0-9]+.[0-9]+.x' # Release branches
+#     paths-ignore:
+#       - '**/*.md'
+#       - 'docs/**'
+#   workflow_dispatch:
+#     inputs:
+#       app-version:
+#         type: string
+#         required: false
+#         default: ""
+#         description: "Override the derived app-version (e.g. 5.0.0 or 5.0.0-rc.1). Leave empty to use the derived snapshot tag (e.g. 5-snapshot)."
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true

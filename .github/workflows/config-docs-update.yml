@@ -16,13 +16,14 @@
 # Copyright (c) OWASP Foundation. All Rights Reserved.
 name: Update Config Documentation
 
-on:
-  push:
-    branches:
-    - main
-    paths:
-    - apiserver/src/main/resources/application.properties
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#     - main
+#     paths:
+#     - apiserver/src/main/resources/application.properties
+# 
 permissions: { }
 
 jobs:
